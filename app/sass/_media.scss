@@ -1,0 +1,83 @@
+@media only screen and ( max-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1380px) {
+
+}
+
+@media only screen and ( max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+
+}
+@media only screen and (max-width: 980px) {
+  .cv-skill p {
+    //width: 50%;
+    margin-right: 20px;
+  }
+  //.progress{
+  //  width: 100%;
+  //}
+}
+
+@media only screen and (max-width: 768px) {
+  .cv-item:first-child{
+    width: 40%;
+  }
+  .cv-skill{
+    justify-content: space-between;
+  }
+
+}
+@media only screen and (max-width: 650px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+  .cv-personal{
+    display:flex;
+    align-items: baseline;
+    &:last-child{
+      display: block;
+    }
+    &.cv-flex{
+      display: flex;
+    }
+    .cv-bold{
+      margin-right: 20px;
+    }
+  }
+  .cv{
+    display: block;
+  }
+  .cv-item:first-child{
+    width: 100%;
+  }
+
+  .cv-img img{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .cv-img{
+    display: flex;
+  }
+
+}
+@media only screen and (max-width: 375px) {
+  .cv-title{
+    font-size: 19px;
+  }
+  .cv-bold{
+    font-size: 16px;
+  }
+  .cv h1 {
+  font-size: 32px;
+  }
+  }
+@media only screen and (max-width: 320px) {
+
+}

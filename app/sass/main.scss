@@ -1,0 +1,229 @@
+@import 'fonts';
+@import 'vars';
+@import 'part';
+
+
+
+.wrapper{
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.container{
+  width: 100%;
+  max-width: 1140px;
+  font-size: 14px;
+  font: $RS;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+.cv{
+  display: flex;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  &-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+  }
+  &-img{
+    width: 100%;
+    img{
+      width: inherit;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  &-item{
+    padding: 20px;
+    &:first-child{
+      background: linear-gradient(45deg, #413939, #9198e5);
+      //background: #413939;
+      color: white;
+      width: 50%;
+    }
+    &-info{
+      position: relative;
+    }
+  }
+ &-bold{
+   font-size: 18px;
+   font-weight: bold;
+   padding: 10px 0 ;
+ }
+  &-italic{
+   font-style: italic ;
+  }
+  &-title{
+    font-size: 20px;
+    font-weight:bold ;
+    position: relative;
+    display: block;
+    padding:20px 0;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white ;
+      bottom: 15px;
+      left: 0;
+    }
+  }
+  h1{
+    font-size: 36px;
+  }
+  &-experience{
+    .cv-title:after{
+      background-color: black;
+    }
+  }
+  &-left{
+    .cv-toggle-open{
+      &:before{
+        background: url("../img/arrow-white.svg");
+      }
+    }
+  }
+  &-toggle{
+    display: block;
+  }
+  &-info-hide{
+    display: none;
+  }
+  &-skill{
+      justify-content: flex-start;
+      align-items: center;
+    p{
+      width:20% ;
+    }
+  }
+  &-list{
+    li{
+      position: relative;
+      padding-left: 20px;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        background-color: #9198e5;
+        border-radius: 100%;
+
+      }
+    }
+  }
+  &-toggle{
+    &-open{
+      &:before{
+        content: '';
+        position: absolute;
+        background-image: url("../img/arrow-left.svg") ;
+        background-repeat: no-repeat;
+        width: 25px;
+        height:25px;
+        border-radius: 100px;
+        //background-color: #9198e5 ;
+        top: 20px;
+        right: 0px;
+        transform: rotate(90deg);
+      }
+    }
+    &-close{
+      &:before{
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+
+.progress{
+  width: 50%;
+  padding: 2px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  //box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 14px;
+  border-radius: 30px;
+  background-image:
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-bar{
+  background-color: #9198e5;
+}
+.progress-moved1 .progress-bar{
+  width: 85%;
+  animation: Animation1 6s;
+}
+
+.progress-moved2 .progress-bar{
+  width: 75%;
+  animation: Animation2 6s;
+}
+.progress-moved3 .progress-bar{
+  width: 60%;
+  animation: Animation3 6s;
+}
+@keyframes Animation1 {
+  0%   { width: 5%; background-color: #413939;}
+  100% { width: 85%; background-color: #9198e5; }
+}
+@keyframes Animation2 {
+  0%   { width: 5%; background-color: #413939;}
+  100% { width: 75%; background-color: #9198e5; }
+}
+@keyframes Animation3 {
+  0%   { width: 5%; background-color: #413939;}
+  100% { width: 60%; background-color: #9198e5; }
+}
+
+
+.scroll-top {
+  cursor: pointer;
+  position:fixed;
+  z-index:999;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  color:#fff;
+  background:rgba(00,00,00,0.3);
+  border:none;
+  opacity:0;
+  transition: opacity 0.4s linear;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    z-index: 7;
+  }
+  &.scroll-visible {
+    opacity:1;
+  }
+}
+
+@import 'media';
