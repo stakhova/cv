@@ -4,11 +4,7 @@
 
 
 
-.wrapper{
-  min-height: 100vh;
-  min-width: 320px;
-  margin: 0 auto;
-}
+
 .container{
   width: 100%;
   max-width: 1140px;
@@ -49,13 +45,13 @@
       position: relative;
     }
   }
- &-bold{
-   font-size: 18px;
-   font-weight: bold;
-   padding: 10px 0 ;
- }
+  &-bold{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0 ;
+  }
   &-italic{
-   font-style: italic ;
+    font-style: italic ;
   }
   &-title{
     font-size: 20px;
@@ -81,7 +77,7 @@
       background-color: black;
     }
   }
-  &-left{
+  &-contact{
     .cv-toggle-open{
       &:before{
         background: url("../img/arrow-white.svg");
@@ -95,8 +91,8 @@
     display: none;
   }
   &-skill{
-      justify-content: flex-start;
-      align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     p{
       width:20% ;
     }
