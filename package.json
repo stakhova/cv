@@ -33,8 +33,5 @@
     "presets": [
       "latest"
     ]
-  },
-  "dependencies": {
-    "node-sass": "^4.11.0"
   }
 }

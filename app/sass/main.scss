@@ -13,8 +13,26 @@
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
+
 .cv{
   display: flex;
+  h2{
+    font-size: 26px;
+    color: #67668c;
+  }
+  &-personal{
+    position: relative;
+    //&:first-child:after{
+    //  content:"";
+    //  position: absolute;
+    //  background-image: url("../img/svg/phone.svg");
+    //  background-repeat: no-repeat;
+    //  width: 25px;
+    //  height:25px;
+    //  top: 20px;
+    //  right: 0px;
+    //}
+  }
   a{
     color: white;
     text-decoration: none;
@@ -52,6 +70,8 @@
   }
   &-italic{
     font-style: italic ;
+    font-size: 14px;
+    padding-bottom: 10px;
   }
   &-title{
     font-size: 20px;
@@ -71,6 +91,21 @@
   }
   h1{
     font-size: 36px;
+  }
+  &-job{
+    position: relative;
+    &:last-child:after{
+      content: 'Jan 2019 - Jun 2019';
+      position: absolute;
+      top: 18px;
+      right: 0;
+    }
+    &:first-child:after{
+      content: 'Jun 2018 - Sep 2018';
+      position: absolute;
+      top: 18px;
+      right: 0;
+    }
   }
   &-experience{
     .cv-title:after{
@@ -162,7 +197,7 @@
   background-color: #9198e5;
 }
 .progress-moved1 .progress-bar{
-  width: 85%;
+  width: 95%;
   animation: Animation1 6s;
 }
 
@@ -171,12 +206,12 @@
   animation: Animation2 6s;
 }
 .progress-moved3 .progress-bar{
-  width: 60%;
+  width: 50%;
   animation: Animation3 6s;
 }
 @keyframes Animation1 {
   0%   { width: 5%; background-color: #413939;}
-  100% { width: 85%; background-color: #9198e5; }
+  100% { width: 95%; background-color: #9198e5; }
 }
 @keyframes Animation2 {
   0%   { width: 5%; background-color: #413939;}
@@ -184,7 +219,7 @@
 }
 @keyframes Animation3 {
   0%   { width: 5%; background-color: #413939;}
-  100% { width: 60%; background-color: #9198e5; }
+  100% { width: 50%; background-color: #9198e5; }
 }
 
 
@@ -192,7 +227,7 @@
   cursor: pointer;
   position:fixed;
   z-index:999;
-  right:14px;
+  right:18px;
   top:50%;
   transform:translateY(-50%);
   width: 30px;
